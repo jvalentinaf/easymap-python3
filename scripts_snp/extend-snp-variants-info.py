@@ -166,7 +166,7 @@ for line1 in in1_array:
 	
 	# Calculate the distance from the variant position to the selected position
 	if str(args.region) == "CR":
-		dist_to_selected_position = int(line1[2]) - selected_position
+		dist_to_selected_position = int(line1[2]) - int(selected_position)
 	elif str(args.region) == "total":
 		dist_to_selected_position = '-'
 	
