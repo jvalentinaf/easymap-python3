@@ -50,8 +50,8 @@ elif step == "2" or step == "4":
         if line.startswith("?"):
             sp = line.split()
             args.chr = sp[1].strip(">")
-            args.pos_min = int(sp[2].strip())
-            args.pos_max = int(sp[3].strip())
+            args.pos_min = int(float(sp[2].strip()))
+            args.pos_max = int(float(sp[3].strip()))
             regs.append([args.chr, args.pos_min, args.pos_max])
 
 # __________________________________________________________________________________________________________________________________________
