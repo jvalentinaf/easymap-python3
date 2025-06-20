@@ -52,7 +52,15 @@ import operator
 sorted_data = sorted(data, key=lambda e: (e[1], int(e[2]))) 
 
 import csv
-with open(output1, 'wb') as f3:
+###### opción 2
+#with open(output1, 'w', newline='') as f3:
+#    writer = csv.writer(f3)
+#    writer.writerows(sorted_data)
+
+if 'b' in f3.mode:
+    writer = csv.writer(f3)
+    writer.writerows([row.encode() if isinstance(row, str) else row for row in sorted_data])
+else:
     writer = csv.writer(f3)
     writer.writerows(sorted_data)
    
