@@ -2201,8 +2201,8 @@ def insertions_overview_and_histograms():
         cap_left = Image.open(image_file_left)
         cap_right = Image.open(image_file_right)
 
-        im.paste(cap_left, (c[3], c[2]-6))
-        im.paste(cap_right, (c[4], c[2]-6))
+        im.paste(cap_left, (int(c[3]), int(c[2]-6)))
+        im.paste(cap_right, (int(c[4]), int(c[2]-6)))
 
     #Axis
     draw.line((100, contigs_image_length + 50) + (950, contigs_image_length + 50), fill=256, width=1)
